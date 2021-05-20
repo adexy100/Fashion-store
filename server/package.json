@@ -1,0 +1,40 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server",
+    "server": "nodemon server",
+    "data:import": "node seeder",
+    "data:destroy": "node seeder -d"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "cloudinary": "^1.25.1",
+    "colors": "^1.4.0",
+    "cors": "^2.8.4",
+    "dotenv": "^8.2.0",
+    "express": "^4.16.2",
+    "express-async-handler": "^1.1.4",
+    "express-fileupload": "^1.2.1",
+    "express-jwt": "^6.0.0",
+    "express-validator": "^6.10.0",
+    "google-auth-library": "^7.0.2",
+    "googleapis": "^67.1.1",
+    "jsonwebtoken": "^8.1.1",
+    "mongoose": "^5.0.2",
+    "morgan": "^1.10.0",
+    "node-fetch": "^2.6.1",
+    "nodemailer": "^6.5.0",
+    "slugify": "^1.4.7"
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0",
+    "nodemon": "^2.0.4"
+  }
+}
