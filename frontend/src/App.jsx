@@ -6,7 +6,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { GlobalStyles } from "./styles/GlobalStyles";
 import Login from "./pages/login";
 import Register from "./pages/register";
-import { FashionHeader, Footer } from "./components/main";
+import { Footer } from "./components/main";
 import { NavBar } from "./components/main";
 import Activate from "./pages/activation";
 import Dashboard from "./pages/admin/Dashboard";
@@ -33,7 +33,6 @@ function App() {
       <GlobalStyles />
       <NavBar />
       <ToastContainer />
-      <FashionHeader />
       <main>
         <Switch>
           <Route path="/login" exact component={Login} />
