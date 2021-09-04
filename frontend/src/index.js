@@ -2,19 +2,19 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router } from "react-router-dom";
 import { Provider } from "react-redux";
-import store from "./store";
+import store from "./redux/store";
 import "./index.css";
 import App from "./App";
-import { SidebarProvider } from "./context/sidebar_context";
 import reportWebVitals from "./reportWebVitals";
+import Scrolly from "./utils/Scrolly";
 
 ReactDOM.render(
   <Provider store={store}>
-    <SidebarProvider>
-      <Router>
+    <Router>
+      <Scrolly>
         <App />
-      </Router>
-    </SidebarProvider>
+      </Scrolly>
+    </Router>
   </Provider>,
   document.getElementById("root")
 );

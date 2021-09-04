@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import { Solid, type, media } from "../../../utils";
+import { Solid, type, media } from "../../../variables";
 
 function CustomInput({
   label,
@@ -13,6 +13,7 @@ function CustomInput({
   onChange,
   errorMessage,
   id,
+  accept,
 }) {
   return (
     <Group size={size}>
@@ -23,6 +24,7 @@ function CustomInput({
         onChange={onChange}
         multiple={multiple}
         required={required}
+        accept={accept}
       />
       <Highlight className="highlight" />
       <Bar className="bar" />

@@ -4,20 +4,8 @@ const mainNavigationItems = [
     name: "Home",
   },
   {
-    url: "/make-up",
-    name: "Makeup",
-  },
-  {
-    url: "/fashion",
-    name: "Fashion",
-  },
-  {
-    url: "/booking",
-    name: "Booking",
-  },
-  {
-    url: "/training",
-    name: "Training",
+    url: "/products",
+    name: "Shop",
   },
   {
     url: "/contact",

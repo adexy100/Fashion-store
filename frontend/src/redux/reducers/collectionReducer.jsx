@@ -14,7 +14,7 @@ import {
   COLLECTIONS_UPDATE_REQUEST,
   COLLECTIONS_UPDATE_SUCCESS,
   COLLECTIONS_UPDATE_FAIL,
-} from "../constants/collectionConstants";
+} from "../../constants/collectionConstants";
 
 export const categoryListReducer = (state = { categories: [] }, action) => {
   switch (action.type) {

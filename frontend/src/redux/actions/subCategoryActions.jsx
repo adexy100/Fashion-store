@@ -15,7 +15,7 @@ import {
   SUB_CATEGORY_UPDATE_REQUEST,
   SUB_CATEGORY_UPDATE_SUCCESS,
   SUB_CATEGORY_UPDATE_FAIL,
-} from "../constants/subCategoryConstant";
+} from "../../constants/subCategoryConstants";
 
 export const listSubs = () => async (dispatch) => {
   try {

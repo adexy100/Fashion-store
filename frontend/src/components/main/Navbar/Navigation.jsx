@@ -2,8 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import { Link, withRouter } from "react-router-dom";
 
-import mainNavigationItems from "../../helpers/mainNavigationItems";
-import { media, Solid, type } from "../../../utils";
+import mainNavigationItems from "../../../helpers/mainNavigationItems";
+import { media, Solid, type } from "../../../variables";
 
 function Navigation({ setIsSubHeading, ...props }) {
   return (

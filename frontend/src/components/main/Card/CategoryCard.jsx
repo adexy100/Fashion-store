@@ -2,9 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import { Link as link } from "react-router-dom";
 
-import { H3, SubHeading } from "../../atoms/Text";
-import Button from "../../atoms/Button";
-import { Solid, media } from "../../variables";
+import { H3, SubHeading } from "../../others/Text";
+import { Button } from "../Button";
+import { Solid, media } from "../../../variables";
 
 function CategoryCard({ background, name, desc, slug }) {
   return (

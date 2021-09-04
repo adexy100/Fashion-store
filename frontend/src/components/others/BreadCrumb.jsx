@@ -2,13 +2,13 @@ import React from "react";
 import styled from "styled-components";
 import { Link as link } from "react-router-dom";
 
-import { media, type } from "../variables";
+import { media, type } from "../../variables";
 
 function BreadCrumb({ current }) {
   return (
     <Wrapper>
       <Container>
-        <Item to="/fashion">Home</Item>/<Current>{current}</Current>
+        <Item to="/">Home</Item>/<Current>{current}</Current>
       </Container>
     </Wrapper>
   );

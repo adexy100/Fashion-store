@@ -27,7 +27,7 @@ import {
   // USER_UPDATE_FAIL,
   // USER_UPDATE_SUCCESS,
   // USER_UPDATE_REQUEST,
-} from "../constants/userConstants";
+} from "../../constants/userConstants";
 
 export const login = (email, password) => async (dispatch) => {
   try {
@@ -71,52 +71,47 @@ export const logout = () => (dispatch) => {
   // dispatch({ type: USER_LIST_RESET });
 };
 
-export const register = (
-  firstName,
-  lastName,
-  email,
-  password,
-  phoneNumber
-) => async (dispatch) => {
-  try {
-    dispatch({
-      type: USER_REGISTER_REQUEST,
-    });
+export const register =
+  (firstName, lastName, email, password, phoneNumber) => async (dispatch) => {
+    try {
+      dispatch({
+        type: USER_REGISTER_REQUEST,
+      });
 
-    const config = {
-      headers: {
-        "Content-Type": "application/json",
-      },
-    };
+      const config = {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      };
 
-    const { data } = await axios.post(
-      "api/users/register",
-      { firstName, lastName, email, password, phoneNumber },
-      config
-    );
+      const { data } = await axios.post(
+        "api/users/register",
+        { firstName, lastName, email, password, phoneNumber },
+        config
+      );
 
-    dispatch({
-      type: USER_REGISTER_SUCCESS,
-      payload: data,
-    });
-    dispatch({
-      type: USER_LOGIN_SUCCESS,
-      payload: data,
-    });
+      dispatch({
+        type: USER_REGISTER_SUCCESS,
+        payload: data,
+      });
+      dispatch({
+        type: USER_LOGIN_SUCCESS,
+        payload: data,
+      });
 
-    toast.success(data.message);
-    console.log(data);
-  } catch (error) {
-    dispatch({
-      type: USER_REGISTER_FAIL,
-      payload:
-        error.response && error.response.data.message
-          ? error.response.data.message
-          : error.message,
-    });
-    toast.error(error.response.data.errors);
-  }
-};
+      toast.success(data.message);
+      console.log(data);
+    } catch (error) {
+      dispatch({
+        type: USER_REGISTER_FAIL,
+        payload:
+          error.response && error.response.data.message
+            ? error.response.data.message
+            : error.message,
+      });
+      toast.error(error.response.data.errors);
+    }
+  };
 
 export const activateUser = (token) => async (dispatch) => {
   try {

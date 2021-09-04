@@ -1,14 +1,14 @@
 import React from "react";
 
 import styled from "styled-components";
-import { Solid, media } from "../../variables";
-import { H2 } from "../../atoms/Text";
-import CollectionCard from "../../molecules/fashion/CollectionCard";
-import lifeStyleIcon from "../../assets/lifestyleImage.png";
-import hoodImage from "../../assets/hood.png";
-import apparelImage from "../../assets/apparelImage.png";
-import capImage from "../../assets/capImage.png";
-import juggerImage from "../../assets/juggerImage.png";
+import { Solid, media } from "../../../variables";
+import { H2 } from "../../others/Text";
+import { CollectionCard } from "../Card";
+import lifeStyleIcon from "../../../images/lifestyleImage.png";
+import hoodImage from "../../../images/hood.png";
+import apparelImage from "../../../images/apparelImage.png";
+import capImage from "../../../images/capImage.png";
+import juggerImage from "../../../images/juggerImage.png";
 
 function FourthBox() {
   return (

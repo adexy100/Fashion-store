@@ -4,33 +4,36 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 import { GlobalStyles } from "./styles/GlobalStyles";
-import Login from "./pages/Login";
-import Register from "./pages/Register";
-import Footer from "./organisms/Footer";
-import Header from "./organisms/NavBar/Header";
-import Sidebar from "./organisms/NavBar/SideBar";
-import Fashion from "./pages/Fashion/Index";
-import Activate from "./pages/CompleteRegister";
-import Dashboard from "./pages/Admin/Dashboard";
-import AdminRoute from "./utils/AdminRoute";
-import NewCategory from "./pages/Admin/NewCategory";
-import CategoryList from "./pages/Admin/CategoryList";
-import CategoryUpdate from "./pages/Admin/CategoryUpdate";
-import SubUpdate from "./pages/Admin/SubCategoryUpdate";
-import SubList from "./pages/Admin/SubCategoryList";
-import SubCreate from "./pages/Admin/SubCategory";
-import UpdateProduct from "./pages/Admin/UpdateProduct";
-import ProductLists from "./pages/Admin/ProductLists";
-import NewProduct from "./pages/Admin/NewProduct";
-import "./App.css";
+import Login from "./pages/login";
+import Register from "./pages/register";
+import { FashionHeader, Footer } from "./components/main";
+import { NavBar } from "./components/main";
+import Activate from "./pages/activation";
+import Dashboard from "./pages/admin/Dashboard";
+import AdminRoute from "./routers/AdminRoute";
+import NewCategory from "./pages/admin/NewCategory";
+import CategoryList from "./pages/admin/CategoryList";
+import CategoryUpdate from "./pages/admin/CategoryUpdate";
+import SubUpdate from "./pages/admin/SubCategoryUpdate";
+import SubList from "./pages/admin/SubCategoryList";
+import SubCreate from "./pages/admin/SubCategory";
+import UpdateProduct from "./pages/admin/UpdateProduct";
+import ProductLists from "./pages/admin/ProductLists";
+import NewProduct from "./pages/admin/NewProduct";
+
+// import Cart from "./Cart";
+// import Category from "./Category";
+import Fashion from "./pages/fashion/home";
+// import WishList from "./WishList";
+import { ProductMain } from "./pages/fashion/product";
 
 function App() {
   return (
     <Router>
       <GlobalStyles />
-      <Header />
+      <NavBar />
       <ToastContainer />
-      <Sidebar />
+      <FashionHeader />
       <main>
         <Switch>
           <Route path="/login" exact component={Login} />
@@ -40,7 +43,8 @@ function App() {
             exact
             render={(props) => <Activate {...props} />}
           />
-          <Route path="/fashion" component={Fashion} />
+          <Route path="/" component={Fashion} exact />
+          <Route path="/products" component={ProductMain} exact />
           <AdminRoute path="/dashboard" component={Dashboard} exact />
           <AdminRoute path="/admin/category" component={NewCategory} exact />
           <AdminRoute path="/admin/categories" component={CategoryList} exact />

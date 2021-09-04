@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import LogoImage from "../../images/logo.svg";
-import { media } from "../../utils";
+import { media } from "../../variables";
 
 const Logo = () => {
   return <Img alt="RaychyBeauty" src={LogoImage} />;

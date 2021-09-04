@@ -2,8 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import { Link, useLocation, useRouteMatch } from "react-router-dom";
 
-import { H3 } from "../../atoms/Text";
-import { media, type } from "../../variables";
+import { H3 } from "../../others/Text";
+import { media, type } from "../../../variables";
 
 function SubCategoriesList({ item }) {
   const location = useLocation();

@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
-import ProductCard from "./ProductCard";
-import { media } from "../../variables";
+import { ProductCard } from "../Card";
+import { media } from "../../../variables";
 
 function ReleasedProduct({ products }) {
   return (

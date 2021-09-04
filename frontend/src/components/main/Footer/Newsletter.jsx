@@ -2,9 +2,9 @@ import React from "react";
 import styled from "styled-components";
 
 import { MediumSubHeading } from "../../others/Text";
-import Button from "../../Button";
+import { Button } from "../Button";
 import Input from "./Input";
-import { media } from "../../../utils";
+import { media } from "../../../variables";
 
 function Newsletter() {
   return (

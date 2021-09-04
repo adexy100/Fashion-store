@@ -16,7 +16,7 @@ import {
   SUB_CATEGORY_UPDATE_SUCCESS,
   SUB_CATEGORY_UPDATE_FAIL,
   SUB_CATEGORY_UPDATE_RESET,
-} from "../constants/subCategoryConstant";
+} from "../../constants/subCategoryConstants";
 
 export const subCategoryListReducer = (state = { subs: [] }, action) => {
   switch (action.type) {
@@ -39,7 +39,7 @@ export const subCategoryDetailsReducer = (state = { sub: {} }, action) => {
     case SUB_CATEGORY_DETAILS_REQUEST:
       return { loading: true, ...state };
     case SUB_CATEGORY_DETAILS_SUCCESS:
-      return { loading: false, sub: action.payload };
+      return { loading: false, sub: action.payload.sub };
     case SUB_CATEGORY_DETAILS_FAIL:
       return { loading: false, error: action.payload };
     default:

@@ -2,9 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import { useDispatch } from "react-redux";
 
-import { Solid, type, media } from "../../variables";
+import { Solid, type, media } from "../../../variables";
 import { Link as link } from "react-router-dom";
-import { logout } from "../../actions/userActions";
+import { logout } from "../../../redux/actions/userActions";
 
 export const Login = ({ icon, user, desc, link, profile }) => {
   return (

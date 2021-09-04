@@ -1,18 +1,18 @@
 import React from "react";
 import styled from "styled-components";
-import ExpandingButton from "../../atoms/ExpandingButton";
 
+import { ExpandingButton } from "../Button";
 import {
   MediumSubHeading,
   SmallSubHeading,
   SubHeading,
-} from "../../atoms/Text";
-import bag from "../../assets/local_mall-24px.svg";
-import { Solid, media } from "../../variables";
-import { ReactComponent as WishIcon } from "../../assets/favorite_border-24px.svg";
-import { ReactComponent as CompareIcon } from "../../assets/compare-24px.svg";
-import { ReactComponent as SearchIcon } from "../../assets/search-24px.svg";
-import image2 from "../../assets/product-image-2.png";
+} from "../../others/Text";
+import bag from "../../../images/local_mall-24px.svg";
+import { Solid, media } from "../../../variables";
+import { ReactComponent as WishIcon } from "../../../images/favorite_border-24px.svg";
+import { ReactComponent as CompareIcon } from "../../../images/compare-24px.svg";
+import { ReactComponent as SearchIcon } from "../../../images/search-24px.svg";
+import image2 from "../../../images/product-image-2.png";
 
 function ProductCard({ product }) {
   const { images, name, actualPrice, discountPrice, category } = product;
@@ -27,14 +27,16 @@ function ProductCard({ product }) {
       </Top>
       <Gender>{category ? category.name : ""}</Gender>
       <ProductName>{name}</ProductName>
-      <Footer>
-        <ExpandingButton icon={bag} text="Add to cart" />
-        <Price>
-          <ActualPrice>${actualPrice}</ActualPrice>
-          <DiscountPrice>${discountPrice}</DiscountPrice>
-        </Price>
+      <Wrapper>
+        <Footer>
+          <ExpandingButton icon={bag} text="Add to cart" />
+          <Price>
+            <ActualPrice>${actualPrice}</ActualPrice>
+            <DiscountPrice>${discountPrice}</DiscountPrice>
+          </Price>
+        </Footer>
         <WishAction />
-      </Footer>
+      </Wrapper>
     </Container>
   );
 }
@@ -88,14 +90,6 @@ const Actions = styled.div`
   padding: 1rem;
 `;
 
-const WishAction = styled(WishIcon)`
-  transition: transform 0.2s;
-  &:hover {
-    cursor: pointer;
-    transform: scale(1.2);
-  }
-`;
-
 const CompareAction = styled(CompareIcon)`
   transition: transform 0.2s;
   &:hover {
@@ -134,9 +128,23 @@ const ProductName = styled(SubHeading)`
   }
 `;
 
-const Footer = styled.div`
+const Wrapper = styled.div`
   margin-top: 1rem;
+  width: 100%;
   display: flex;
+  justify-content: space-between;
+`;
+
+const Footer = styled.div`
+  display: flex;
+`;
+
+const WishAction = styled(WishIcon)`
+  transition: transform 0.2s;
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+  }
 `;
 
 const Price = styled.div`

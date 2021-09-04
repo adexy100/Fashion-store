@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { useSelector } from "react-redux";
 
-import { Solid, type } from "../../../utils";
+import { Solid, type } from "../../../variables";
 import { Link as link } from "react-router-dom";
 
 export default function Profile({ desc, link }) {

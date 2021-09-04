@@ -4,15 +4,15 @@ import styled from "styled-components";
 import axios from "axios";
 import Pagination from "react-js-pagination";
 
-import ProductCard from "../../molecules/fashion/ProductCard";
-import Button from "../../atoms/Button";
-import { media } from "../../variables";
-import { getAllProducts } from "../../actions/productActions";
-import ProductSkeleton from "../../atoms/ProductSkeleton";
+import { ProductCard } from "../Card";
+import { Button } from "../Button";
+import { media } from "../../../variables";
+import { getAllProducts } from "../../../redux/actions/productActions";
+import ProductSkeleton from "../../others/ProductSkeleton";
 
 const PaginateNext = () => {
   return (
-    <Action size="sm" variant="primary">
+    <Action size="md" variant="primary">
       Next
     </Action>
   );
@@ -20,7 +20,7 @@ const PaginateNext = () => {
 
 const PaginatePrev = () => {
   return (
-    <Action size="sm" variant="primary">
+    <Action size="md" variant="primary">
       Prev
     </Action>
   );
@@ -45,6 +45,10 @@ function Products() {
     getProductsCount().then((res) => setProductsCount(res.data));
   }, []);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [page]);
+
   return (
     <Container>
       {loading ? (
@@ -64,7 +68,10 @@ function Products() {
               nextPageText={<PaginateNext />}
               prevPageText={<PaginatePrev />}
               activeClass="active"
-              itemClassLast="items"
+              itemClass="items"
+              linkClass="link"
+              innerClass="pagination"
+              activeLinkClass
             />
           </Actions>
         </>
@@ -78,6 +85,7 @@ const Container = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin-bottom: 6rem;
 
   @media screen and ${media.tablet}, ${media.desktop} {
     width: 75%;
@@ -93,9 +101,6 @@ const Actions = styled.div`
 
   .active {
     display: none;
-  }
-  .item {
-    color: inherit;
   }
 `;
 

@@ -1,7 +1,7 @@
 import React from "react";
 
 import styled from "styled-components";
-import { Solid, type, media } from "../../../utils";
+import { Solid, type, media } from "../../../variables";
 
 function Input() {
   return (

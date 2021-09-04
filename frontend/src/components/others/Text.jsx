@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Solid, media, type } from "../../utils";
+import { Solid, media, type } from "../../variables";
 
 export const H1 = styled.h1`
   font-size: 9rem;

@@ -18,7 +18,7 @@ import {
   CATEGORY_SUB_REQUEST,
   CATEGORY_SUB_SUCCESS,
   CATEGORY_SUB_FAIL,
-} from "../constants/categoryConstants";
+} from "../../constants/categoryConstants";
 
 export const listCategories = () => async (dispatch) => {
   try {

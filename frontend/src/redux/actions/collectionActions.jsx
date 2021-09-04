@@ -15,7 +15,7 @@ import {
   COLLECTIONS_UPDATE_REQUEST,
   COLLECTIONS_UPDATE_SUCCESS,
   COLLECTIONS_UPDATE_FAIL,
-} from "../constants/collectionConstants";
+} from "../../constants/collectionConstants";
 
 export const listcollections = () => async (dispatch) => {
   try {
@@ -124,43 +124,41 @@ export const createCollection = (collection) => async (dispatch, getState) => {
   }
 };
 
-export const updateCollection = (slug, collection) => async (
-  dispatch,
-  getState
-) => {
-  try {
-    dispatch({
-      type: COLLECTIONS_UPDATE_REQUEST,
-    });
+export const updateCollection =
+  (slug, collection) => async (dispatch, getState) => {
+    try {
+      dispatch({
+        type: COLLECTIONS_UPDATE_REQUEST,
+      });
 
-    const {
-      userLogin: { user },
-    } = getState();
+      const {
+        userLogin: { user },
+      } = getState();
 
-    const config = {
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${user.token}`,
-      },
-    };
+      const config = {
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${user.token}`,
+        },
+      };
 
-    const { data } = await axios.put(
-      `/api/collection/${slug}`,
-      collection,
-      config
-    );
+      const { data } = await axios.put(
+        `/api/collection/${slug}`,
+        collection,
+        config
+      );
 
-    dispatch({
-      type: COLLECTIONS_UPDATE_SUCCESS,
-      payload: data,
-    });
-  } catch (error) {
-    dispatch({
-      type: COLLECTIONS_UPDATE_FAIL,
-      payload:
-        error.response && error.response.data.message
-          ? error.response.data.message
-          : error.message,
-    });
-  }
-};
+      dispatch({
+        type: COLLECTIONS_UPDATE_SUCCESS,
+        payload: data,
+      });
+    } catch (error) {
+      dispatch({
+        type: COLLECTIONS_UPDATE_FAIL,
+        payload:
+          error.response && error.response.data.message
+            ? error.response.data.message
+            : error.message,
+      });
+    }
+  };

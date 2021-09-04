@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import { SmallSubHeading } from "../../others/Text";
-import { Solid, type, media } from "../../../utils";
+import { Solid, type, media } from "../../../variables";
 
 function HeaderList({ header, items, url }) {
   return (

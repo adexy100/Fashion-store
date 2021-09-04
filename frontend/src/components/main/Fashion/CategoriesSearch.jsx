@@ -1,12 +1,12 @@
 import React from "react";
-
 import styled from "styled-components";
-import subCategories from "../../data/subCategories";
-import SubCategoriesList from "../../molecules/fashion/SubCategoriesList";
-import SeasonCard from "../../molecules/fashion/SeasonCard";
-import womenSeasonBackground from "../../assets/gettyimages-573103007-2048x2048@2x.png";
-import menSeasonBackground from "../../assets/gettyimages-573103007-2048x2048@2x.png";
-import { media } from "../../variables";
+
+import subCategories from "../../../helpers/subCategories";
+import SubCategoriesList from "./SubCategoriesList";
+import { SeasonCard } from "../Card";
+import womenSeasonBackground from "../../../images/gettyimages-573103007-2048x2048@2x.png";
+import menSeasonBackground from "../../../images/gettyimages-573103007-2048x2048@2x.png";
+import { media } from "../../../variables";
 
 function CategoriesSearch({ type }) {
   return (

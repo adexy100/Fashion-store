@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
-import AnimatedArrow from "./AnimatedArrow";
+import { AnimatedArrow } from "../Arrow";
 import { MediumSubHeading } from "../../others/Text";
-import { type } from "../../../utils";
+import { type } from "../../../variables";
 
 function CustomDropdown({ title, items, children }) {
   const [isActive, setIsActive] = useState(true);

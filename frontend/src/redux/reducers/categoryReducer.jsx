@@ -19,7 +19,7 @@ import {
   CATEGORY_SUB_REQUEST,
   CATEGORY_SUB_SUCCESS,
   CATEGORY_SUB_FAIL,
-} from "../constants/categoryConstants";
+} from "../../constants/categoryConstants";
 
 export const categoryListReducer = (state = { categories: [] }, action) => {
   switch (action.type) {
@@ -42,7 +42,7 @@ export const categoryDetailsReducer = (state = { category: {} }, action) => {
     case CATEGORY_DETAILS_REQUEST:
       return { loading: true, ...state };
     case CATEGORY_DETAILS_SUCCESS:
-      return { loading: false, category: action.payload };
+      return { loading: false, category: action.payload.category };
     case CATEGORY_DETAILS_FAIL:
       return { loading: false, error: action.payload };
     default:

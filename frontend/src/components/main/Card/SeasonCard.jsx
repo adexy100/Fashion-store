@@ -2,7 +2,7 @@ import React from "react";
 import { Link as link } from "react-router-dom";
 
 import styled from "styled-components";
-import { H3, SubHeading } from "../../atoms/Text";
+import { H3, SubHeading } from "../../others/Text";
 
 function SeasonCard({
   link,

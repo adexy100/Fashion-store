@@ -34,7 +34,7 @@ import {
   DELETE_REVIEW_REQUEST,
   DELETE_REVIEW_SUCCESS,
   DELETE_REVIEW_FAIL,
-} from "../constants/productConstants";
+} from "../../constants/productConstants";
 
 export const getProducts = (sort, order, limit) => async (dispatch) => {
   try {

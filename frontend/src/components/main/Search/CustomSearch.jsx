@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 
-import { Solid } from "../../../utils";
-import search from "../assets/magnify.png";
-import searchdark from "../assets/magnify-dark.png";
+import { Solid } from "../../../variables";
+import search from "../../../images/magnify.png";
+import searchdark from "../../../images/magnify-dark.png";
 
 function CustomSearch() {
   return (

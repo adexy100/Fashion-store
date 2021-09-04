@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Link as link } from "react-router-dom";
 
-import { H2 } from "../../atoms/Text";
+import { H2 } from "../../others/Text";
 
 function CollectionCard({ background, header, width, height }) {
   return (

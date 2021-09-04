@@ -1,5 +1,5 @@
 import React from "react";
-import { media, Gradient, Solid, type } from "../../../utils";
+import { media, Gradient, Solid, type } from "../../../variables";
 import styled from "styled-components";
 
 const Button = ({ children, size, ...props }) => {

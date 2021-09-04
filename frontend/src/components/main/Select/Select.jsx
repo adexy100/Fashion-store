@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import { Solid, type, media } from "../variables";
+import { Solid, type, media } from "../../../variables";
 
 function Select({ label, onChange, value, category, select }) {
   return (

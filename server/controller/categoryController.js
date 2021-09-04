@@ -1,5 +1,6 @@
 import Category from "../model/categoryModel.js";
 import Sub from "../model/subModel.js";
+import Product from "../model/productModel.js";
 import slugify from "slugify";
 import cloudinary from "cloudinary";
 

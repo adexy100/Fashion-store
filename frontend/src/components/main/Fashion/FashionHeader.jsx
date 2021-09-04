@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import CustomSearch from "../../atoms/CustomSearch";
+import { CustomSearch } from "../Search";
 
-import { Solid, type, media } from "../../variables";
+import { Solid, type, media } from "../../../variables";
 import CategoriesSearch from "./CategoriesSearch";
 
 function FashionHeader() {
